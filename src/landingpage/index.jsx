@@ -83,28 +83,31 @@ const LandingPage = () => {
 					</div>
 				</div>
 			</header>
-			<section className="flex flex-col md:grid md:grid-cols-2 md:text-left lg:grid lg:grid-cols-4 lg:text-left text-center gap-5 pt-12 pb-12 border-b-4 border-b-white">
-				<div>
-					<h1 className="text-2xl font-sans">React</h1>
-				</div>
-				<div>
-					<h1 className="text-2xl font-sans">Tailwind CSS</h1>
-				</div>
-				<div>
-					<h1 className="text-2xl font-sans">JavaScript</h1>
-				</div>
-				<div>
-					<h1 className="text-2xl font-sans">HMTL</h1>
-				</div>
-				<div>
-					<h1 className="text-2xl font-sans">CSS</h1>
-				</div>
+			<section className="flex flex-col gap-2">
+				<h1 className="text-4xl font-sans">SKILLS</h1>
+				<div className="flex flex-col md:grid md:grid-cols-2 md:text-left lg:grid lg:grid-cols-4 lg:text-left text-center gap-5 pt-12 pb-12 border-b-4 border-b-white">
+					<div>
+						<h1 className="text-2xl font-sans">React</h1>
+					</div>
+					<div>
+						<h1 className="text-2xl font-sans">Tailwind CSS</h1>
+					</div>
+					<div>
+						<h1 className="text-2xl font-sans">JavaScript</h1>
+					</div>
+					<div>
+						<h1 className="text-2xl font-sans">HMTL</h1>
+					</div>
+					<div>
+						<h1 className="text-2xl font-sans">CSS</h1>
+					</div>
 
-				<div>
-					<h1 className="text-2xl font-sans">WordPress</h1>
-				</div>
-				<div>
-					<h1 className="text-2xl font-sans">Scrum</h1>
+					<div>
+						<h1 className="text-2xl font-sans">WordPress</h1>
+					</div>
+					<div>
+						<h1 className="text-2xl font-sans">Scrum</h1>
+					</div>
 				</div>
 			</section>
 			<section className="flex flex-col gap-7 mt-20 pb-12 border-b-4 border-b-white ">
