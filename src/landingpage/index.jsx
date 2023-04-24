@@ -97,9 +97,7 @@ const LandingPage = () => {
 				<div>
 					<h1 className="text-2xl font-sans">CSS</h1>
 				</div>
-				<div>
-					<h1 className="text-2xl font-sans">TypeScript</h1>
-				</div>
+
 				<div>
 					<h1 className="text-2xl font-sans">WordPress</h1>
 				</div>
