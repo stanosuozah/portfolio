@@ -73,7 +73,9 @@ const LandingPage = () => {
 							love
 						</p>
 						<h3 className="font-sans text-2xl border-b-4 border-b-lime-600 pb-3">
-							CONTACT ME
+							<a className="cursor-pointer" href="#contact">
+								CONTACT ME
+							</a>
 						</h3>
 					</div>
 					<div className="">
@@ -109,7 +111,9 @@ const LandingPage = () => {
 				<div className="flex justify-between items-center">
 					<h1 className="font-sans text-3xl">Projects</h1>
 					<p className=" font-sans text-md border-b-4 border-b-lime-600 pb-3">
-						CONTACT ME
+						<a className="cursor-pointer" href="#contact">
+							CONTACT ME
+						</a>
 					</p>
 				</div>
 				<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-7 lg:grid lg:grid-cols-2 lg:gap-8">
@@ -167,7 +171,10 @@ const LandingPage = () => {
 					/>
 				</div>
 			</section>
-			<section className="flex flex-col gap-5 mt-10 justify-center pb-12 border-b-4 border-b-white md:grid md:grid-cols-2 lg:grid lg:grid-cols-2">
+			<section
+				id="contact"
+				className="flex flex-col gap-5 mt-10 justify-center pb-12 border-b-4 border-b-white md:grid md:grid-cols-2 lg:grid lg:grid-cols-2"
+			>
 				<div className="flex flex-col gap-3 text-center md:text-left lg:text-left">
 					<h1 className="text-2xl font-sans md:text-lg lg:text-4xl font-bold">
 						Contact

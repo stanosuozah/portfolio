@@ -25,6 +25,7 @@ const ProjectCard = ({
 				<a
 					className="text-xl cursor-pointer border-b-4 border-b-lime-600 pb-4"
 					href={webLink}
+					target="_blank"
 				>
 					VIEW PROJECT
 				</a>
