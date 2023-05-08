@@ -127,7 +127,8 @@ const LandingPage = () => {
 						language2="JAVASCRIPT"
 						language3="HTML"
 						language4="TAILWIND CSS"
-						webLink="https://fintech-dashboard-kappa.vercel.app/login"
+						webLink="https://fintech-dashboard-kappa.vercel.app/"
+						gitCode="https://github.com/stanosuozah/fintech_dashboard"
 					/>
 					<ProjectCard
 						image="/images/unideals.png"
@@ -139,11 +140,12 @@ const LandingPage = () => {
 						webLink="https://partners.myunideals.com/"
 					/>
 					<ProjectCard
-						image="/images/finebank.png"
+						image="/images/ehya.png"
 						name="BLOG APP UI DESIGN"
 						language1="REACT"
 						language4="TAILWIND CSS"
 						webLink="https://ehyablog.vercel.app/"
+						gitCode="https://github.com/stanosuozah/ehyablog"
 					/>
 
 					<ProjectCard
