@@ -121,33 +121,31 @@ const LandingPage = () => {
 				</div>
 				<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-7 lg:grid lg:grid-cols-2 lg:gap-8">
 					<ProjectCard
-						image="/images/unideals.png"
-						name="UNIDEALS WEB APP"
-						language1="REACT"
-						language2="JAVASCRIPT"
-						language3="HTML"
-						language4="TAILWIND CSS"
-						webLink="https://myunideals.com/"
-					/>
-
-					<ProjectCard
 						image="/images/finebank.png"
 						name="FINTECH DASHBOARD"
 						language1="REACT"
 						language2="JAVASCRIPT"
 						language3="HTML"
 						language4="TAILWIND CSS"
+						webLink="https://fintech-dashboard-kappa.vercel.app/login"
 					/>
 					<ProjectCard
-						image="/images/e-com.png"
-						name="EXCLUSIVE E-COMMERCE WEB APP"
+						image="/images/unideals.png"
+						name="UNIDEALS WEB APP"
 						language1="REACT"
 						language2="JAVASCRIPT"
 						language3="HTML"
-						language4="CSS"
-						webLink="https://exclusive-ecommerce.vercel.app/"
-						gitCode="https://github.com/stanosuozah/exclusive-ecommerce"
+						language4="TAILWIND CSS"
+						webLink="https://partners.myunideals.com/"
 					/>
+					<ProjectCard
+						image="/images/finebank.png"
+						name="BLOG APP UI DESIGN"
+						language1="REACT"
+						language4="TAILWIND CSS"
+						webLink="https://ehyablog.vercel.app/"
+					/>
+
 					<ProjectCard
 						image="/images/bloomway.png"
 						name="BLOOMWAY HEALTHCARE WEBSITE"
