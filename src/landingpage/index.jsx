@@ -263,7 +263,7 @@ const LandingPage = () => {
 						</a>
 						<a
 							className="cursor-pointer"
-							href="/files/Stanley-Osuozah FrontendDev.pdf"
+							href="/files/Stanley-Osuozah FrontendDev updated.docx"
 							download
 						>
 							<p className="font-sans">Resume</p>
