@@ -12,8 +12,10 @@ import SkillsCard from "../components/SkillsCard";
 import Unideals from "../assets/images/unideals.png";
 import Finebank from "../assets/images/finebank.png";
 import Ehya from "../assets/images/ehya.png";
+import Bloomway from "../assets/images/bloomway.png";
 import UnidealsPartner from "../assets/images/unidealspartner.png";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-scroll";
 
 const LandingPage = () => {
 	const handleSubmit = () => {
@@ -36,7 +38,7 @@ const LandingPage = () => {
 				name="home"
 				className="flex flex-col gap-1 h-auto mt-10 justify-center max-w-[1000px] mx-auto px-6"
 			>
-				<p className="text-white font-Inter">Hi, I am </p>
+				<p className="text-white font-Inter">Hi, I'm </p>
 				<h1 className="font-Inter text-4xl sm:text-6xl font-bold text-white">
 					Stanley Osuozah.
 				</h1>
@@ -44,20 +46,19 @@ const LandingPage = () => {
 					I'm a Frontend Developer.
 				</h2>
 				<p className="font-Inter max-w-[700px] text-white/60 py-4">
-					Highly motivated web developer with a keen focus on front-end
-					development, I have a proven track record of successfully creating
-					responsive web applications. My extensive knowledge of HTML, CSS,
-					ReactJS, and JavaScript, combined with my passion for developing
-					innovative user interfaces, enables me to deliver exceptional user
-					experiences that meet the needs of businesses and their users.{" "}
+					Highly skilled A skilled and dedicated frontend developer with over
+					3years of experience in designing and developing user interfaces for
+					web applications.
 				</p>
 				<div>
-					<button className="border-2 font-Inter  group flex gap-2 items-center px-6 py-3 mb-2 hover:bg-black/80 hover:border-black/80 text-white">
-						See Projects
-						<span>
-							<HiArrowNarrowRight className="group-hover:rotate-90 duration-300" />
-						</span>
-					</button>
+					<Link to="projects" smooth={true} duration={500}>
+						<button className="border-2 font-Inter  group flex gap-2 items-center px-6 py-3 mb-2 hover:bg-black/80 hover:border-black/80 text-white">
+							See Projects
+							<span>
+								<HiArrowNarrowRight className="group-hover:rotate-90 duration-300" />
+							</span>
+						</button>
+					</Link>
 				</div>
 			</div>
 
@@ -67,7 +68,7 @@ const LandingPage = () => {
 					<div className="w-full px-2  max-w-[1000px] grid gap-8 grid-cols-2">
 						<div className="sm:text-right pb-8 pl-4">
 							<p className="font-Inter text-4xl font-bold inline text-white border-b-4 border-white/60">
-								About
+								About Me
 							</p>
 						</div>
 						<div></div>
@@ -82,11 +83,8 @@ const LandingPage = () => {
 							<p>
 								Highly motivated web developer with a keen focus on front-end
 								development, I have a proven track record of successfully
-								creating responsive web applications. My extensive knowledge of
-								HTML, CSS, ReactJS, and JavaScript, combined with my passion for
-								developing innovative user interfaces, enables me to deliver
-								exceptional user experiences that meet the needs of businesses
-								and their users.
+								creating responsive web applications using React, HTML, CSS and
+								JavaScript.
 							</p>
 						</div>
 					</div>
@@ -123,7 +121,7 @@ const LandingPage = () => {
 						<p className="font-Inter border-b-4 border-white/70 inline text-4xl font-bold">
 							Projects
 						</p>
-						<p className="font-Inter">Checkout some of my projects</p>
+						<p className="font-Inter mt-2">Checkout some of my projects</p>
 					</div>
 
 					<div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -148,12 +146,17 @@ const LandingPage = () => {
 							image={Ehya}
 							projectURL="https://ehyablog.vercel.app/"
 						/>
+						<ProjectCard
+							name="Bloomway Healthcare"
+							image={Bloomway}
+							projectURL="https://bloomway.co.uk/"
+						/>
 					</div>
 				</div>
 			</div>
 			{/* 
 			CONTACT SECTION */}
-			<div name="contact" className="bg-blue-950 mt-20">
+			<div name="contact" className="bg-blue-950 mt-32">
 				<div className="flex flex-col w-full text-white justify-center items-center px-4 mx-auto max-w-[1000px]">
 					<form
 						method="post"
