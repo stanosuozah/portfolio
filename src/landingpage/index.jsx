@@ -114,7 +114,7 @@ const LandingPage = () => {
 						<p className="font-Inter mt-2">Checkout some of my projects</p>
 					</div>
 
-					<div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4">
+					<div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-6">
 						<ProjectCard
 							name="Finebank Dashboard"
 							projectURL="https://fintech-dashboard-kappa.vercel.app/"
@@ -146,7 +146,7 @@ const LandingPage = () => {
 			</div>
 			{/* 
 			CONTACT SECTION */}
-			<div name="contact" className="bg-blue-950 md:mt-32 mt-10">
+			<div name="contact" className="bg-blue-950 md:mt-32 mt-20">
 				<div className="flex flex-col w-full text-white justify-center items-center px-4 mx-auto max-w-[1000px]">
 					<form
 						method="post"
