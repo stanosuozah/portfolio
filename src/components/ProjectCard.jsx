@@ -4,10 +4,14 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ image, name, projectURL, gitHub }) => {
 	return (
 		<div className="rounded-md container items-center justify-center  mx-auto shadow-lg shadow-[#050c16] group">
-			<div className="w-full h-[250px] ">
-				<img src={image} alt="" className="w-full group-hover:hidden h-full" />
+			<div className="w-full h-[180px] md:w-full md:h-[180px] ">
+				<img
+					src={image}
+					alt=""
+					className="w-full group-hover:hidden md:h-full h-[180px]"
+				/>
 				{/* ON HOVER  DIV TO APPEAR*/}
-				<div className="group-hover:opacity-100 opacity-0 content hover:duration-300 hidden group-hover:flex flex-col justify-center items-center rounded-lg">
+				<div className="group-hover:opacity-100 md:h-[180px] opacity-0 content hover:duration-300 hidden group-hover:flex flex-col justify-center items-center rounded-lg">
 					<span className="font-bold font-Inter text-2xl text-white tracking-wider">
 						{name}
 					</span>

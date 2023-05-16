@@ -178,7 +178,7 @@ const LandingPage = () => {
 							className="p-2 rounded-md bg-[#ccd6f6]"
 						></textarea>
 						<button className="border-2 hover:bg-black duration-300 border-white mx-auto flex text-white px-4 py-3">
-							Let's collaborate now!
+							Let's collaborate
 						</button>
 					</form>
 				</div>
