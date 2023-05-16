@@ -46,9 +46,8 @@ const LandingPage = () => {
 					I'm a Frontend Developer.
 				</h2>
 				<p className="font-Inter max-w-[700px] text-white/60 py-4">
-					Highly skilled A skilled and dedicated frontend developer with over
-					3years of experience in designing and developing user interfaces for
-					web applications.
+					Dedicated frontend developer with over 3years of experience in
+					designing and developing user interfaces for web applications.
 				</p>
 				<div>
 					<Link to="projects" smooth={true} duration={500}>
