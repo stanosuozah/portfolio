@@ -11,7 +11,7 @@ const ProjectCard = ({ image, name, projectURL, gitHub }) => {
 					className="w-full group-hover:hidden md:h-full h-[180px]"
 				/>
 				{/* ON HOVER  DIV TO APPEAR*/}
-				<div className="group-hover:opacity-100 md:h-[180px] opacity-0 content hover:duration-300 hidden group-hover:flex flex-col justify-center items-center rounded-lg">
+				<div className="group-hover:opacity-100 md:h-full opacity-0 content hover:duration-300 hidden group-hover:flex flex-col justify-center items-center rounded-lg">
 					<span className="font-bold font-Inter text-2xl text-white tracking-wider">
 						{name}
 					</span>
