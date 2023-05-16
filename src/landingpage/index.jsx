@@ -26,6 +26,7 @@ const LandingPage = () => {
 			<NavBar />
 			{/* ABOUT SECTION */}
 			<div
+				id="home"
 				name="home"
 				className="flex flex-col gap-1 h-auto mt-10 justify-center max-w-[1000px] mx-auto px-6"
 			>
@@ -53,7 +54,11 @@ const LandingPage = () => {
 			</div>
 
 			{/* ABOUT SECTION */}
-			<div name="about" className="w-full md:mt-20 mt-10 h-auto   bg-blue-950 ">
+			<div
+				id="about"
+				name="about"
+				className="w-full md:mt-20 mt-10 h-auto   bg-blue-950 "
+			>
 				<div className="flex flex-col justify-center items-center w-full ">
 					<div className="w-full px-2  max-w-[1000px] grid gap-8 grid-cols-2">
 						<div className="sm:text-right pb-8 pl-4">
@@ -82,7 +87,7 @@ const LandingPage = () => {
 			</div>
 
 			{/* SKILLS */}
-			<div name="skills" className="bg-blue-950 md:mt-20 mt-10">
+			<div id="skills" name="skills" className="bg-blue-950 md:mt-20 mt-10">
 				<div className="flex flex-col w-full text-white justify-center px-4 mx-auto max-w-[1000px]">
 					<div>
 						<p className="text-white text-4xl inline font-Inter font-bold border-b-4 border-white/70">
@@ -103,6 +108,7 @@ const LandingPage = () => {
 
 			{/* PROJECTS */}
 			<div
+				id="projects"
 				name="projects"
 				className="w-full md:h-screen text-white bg-blue950 md:mt-20 mt-10"
 			>
@@ -146,7 +152,11 @@ const LandingPage = () => {
 			</div>
 			{/* 
 			CONTACT SECTION */}
-			<div name="contact" className="bg-blue-950 md:mt-32 mt-20">
+			<div
+				id="contact"
+				name="contact"
+				className="bg-blue-950 md:mt-5 md:pb-5 mt-20"
+			>
 				<div className="flex flex-col w-full text-white justify-center items-center px-4 mx-auto max-w-[1000px]">
 					<form
 						method="post"
