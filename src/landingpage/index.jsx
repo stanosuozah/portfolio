@@ -1,276 +1,195 @@
-import { React, useRef, useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaBars } from "react-icons/fa";
-import ProjectCard from "../assets/components/ProjectCard";
-import emailjs from "@emailjs/browser";
+import React from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import axios from "axios";
+import NavBar from "../components/NavBar";
+import HTML from "../assets/images/html.png";
+import CSS from "../assets/images/css.png";
+import JAVASCRIPT from "../assets/images/javascript.png";
+import REACT from "../assets/images/react.png";
+import TAILWIND from "../assets/images/tailwind.png";
+import GIT from "../assets/images/github.png";
+import SkillsCard from "../components/SkillsCard";
+import Unideals from "../assets/images/unideals.png";
+import Finebank from "../assets/images/finebank.png";
+import Ehya from "../assets/images/ehya.png";
+import UnidealsPartner from "../assets/images/unidealspartner.png";
+import ProjectCard from "../components/ProjectCard";
 
 const LandingPage = () => {
-	const form = useRef();
-
-	const sendEmail = (e) => {
-		e.preventDefault();
-
-		emailjs
-			.sendForm(
-				"service_4lsr0mn",
-				"template_d2vux6j",
-				form.current,
-				"Sw9NrLtJMjgI55HWT"
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-					alert("Message sent!");
-					e.target.reset();
+	const handleSubmit = () => {
+		axios
+			.post(
+				"https://getform.io/f/df107ebc-e370-4a98-96b3-c02f5d01f0c5",
+				{
+					message: "Hello, World",
 				},
-				(error) => {
-					console.log(error.text);
-				}
-			);
+				{ headers: { Accept: "application/json" } }
+			)
+			.then((response) => console.log(response))
+			.catch((error) => console.log(error));
 	};
-
 	return (
-		<div className="bg-slate-950 text-white px-8 py-4 lg:px-24">
-			<header className="flex flex-col gap-2 justify-center md:flex md:justify-between lg:flex lg:justify-between xl:flex xl:justify-between 2xl:flex 2xl:justify-between">
-				<nav className="flex flex-col gap-2 justify-center items-center lg:mb-8 md:flex-row md:justify-between  lg:flex lg:justify-between xl:flex xl:justify-between 2xl:flex 2xl:justify-between sm:p-0 md:p-0 lg:p-0 xl:p-0 2xl:p-0">
-					<p>stanleyosuozah</p>
-
-					<div className="flex gap-3 items-center">
-						<a href="https://github.com/stanosuozah" target="_blank">
-							<FaGithub />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/stanley-osuozah-260292142/"
-							target="_blank"
-						>
-							<FaLinkedin />
-						</a>
-						<a
-							className="cursor-pointer"
-							href="/files/Stanley-Osuozah FrontendDev updated.docx"
-							download
-						>
-							<p className="font-sans">Resume</p>
-						</a>
-					</div>
-				</nav>
-				<div className="flex flex-col-reverse gap-12 md:flex lg:flex lg:justify-between lg:items-center md:justify-between justify-center items-center md:flex-row border-b-4 border-b-white">
-					<div className="flex md:flex md:flex-col md:items-start md:gap-6 lg:flex-col lg:-mr-6 lg:gap-8 lg:items-start md:items-left md:justify-start lg:flex flex-col gap-5 items-center md:-mr-10 z-10 pb-12 ">
-						<div className="">
-							<h1 className="font-sans text-3xl text-center md:text-left lg:text-left lg:text-4xl">
-								Nice to meet you!
-							</h1>
-							<h1 className="font-sans text-3xl text-center">
-								I'm{" "}
-								<span className="border-b-4 border-lime-600">
-									Stanley Osuozah.
-								</span>
-							</h1>
-						</div>
-
-						<p className="font-sans text-base text-center md:text-sm md:w-[60ch]  md:text-left lg:text-sm lg:w-[60ch] lg:text-left">
-							Based in Birmingham, UK. I'm a frontend developer passionate about
-							building responsive and accessible web applications that users
-							love
-						</p>
-						<h3 className="font-sans text-2xl border-b-4 border-b-lime-600 pb-3">
-							<a className="cursor-pointer" href="#contact">
-								CONTACT ME
-							</a>
-						</h3>
-					</div>
-					<div className="">
-						<img src="/images/stanosuozah.png" className="" />
-					</div>
-				</div>
-			</header>
-			<section className="flex flex-col gap-2">
-				<h1 className="text-4xl font-sans">SKILLS</h1>
-				<div className="flex flex-col md:grid md:grid-cols-2 md:text-left lg:grid lg:grid-cols-4 lg:text-left text-center gap-5 pt-12 pb-12 border-b-4 border-b-white">
-					<div>
-						<h1 className="text-2xl font-sans">React</h1>
-					</div>
-					<div>
-						<h1 className="text-2xl font-sans">Tailwind CSS</h1>
-					</div>
-					<div>
-						<h1 className="text-2xl font-sans">JavaScript</h1>
-					</div>
-					<div>
-						<h1 className="text-2xl font-sans">HMTL</h1>
-					</div>
-					<div>
-						<h1 className="text-2xl font-sans">CSS</h1>
-					</div>
-
-					<div>
-						<h1 className="text-2xl font-sans">WordPress</h1>
-					</div>
-					<div>
-						<h1 className="text-2xl font-sans">Scrum</h1>
-					</div>
-				</div>
-			</section>
-			<section className="flex flex-col gap-7 mt-20 pb-12 border-b-4 border-b-white ">
-				<div className="flex justify-between items-center">
-					<h1 className="font-sans text-3xl">Projects</h1>
-					<p className=" font-sans text-md border-b-4 border-b-lime-600 pb-3">
-						<a className="cursor-pointer" href="#contact">
-							CONTACT ME
-						</a>
-					</p>
-				</div>
-				<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-7 lg:grid lg:grid-cols-2 lg:gap-8">
-					<ProjectCard
-						image="/images/finebank.png"
-						name="FINTECH DASHBOARD"
-						language1="REACT"
-						language2="JAVASCRIPT"
-						language3="HTML"
-						language4="TAILWIND CSS"
-						webLink="https://fintech-dashboard-kappa.vercel.app/"
-						gitCode="https://github.com/stanosuozah/fintech_dashboard"
-					/>
-					<ProjectCard
-						image="/images/unideals.png"
-						name="UNIDEALS WEB APP"
-						language1="REACT"
-						language2="JAVASCRIPT"
-						language3="HTML"
-						language4="TAILWIND CSS"
-						webLink="https://partners.myunideals.com/"
-					/>
-					<ProjectCard
-						image="/images/ehya.png"
-						name="BLOG APP UI DESIGN"
-						language1="REACT"
-						language4="TAILWIND CSS"
-						webLink="https://ehyablog.vercel.app/"
-						gitCode="https://github.com/stanosuozah/ehyablog"
-					/>
-
-					<ProjectCard
-						image="/images/bloomway.png"
-						name="BLOOMWAY HEALTHCARE WEBSITE"
-						language1="WORDPRESS"
-						language2="CSS"
-						language3="HTML"
-						webLink="https://bloomway.co.uk/"
-					/>
-					<ProjectCard
-						image="/images/baseline.png"
-						name="BASELINE HEALTHCARE WEBSITE"
-						language1="WORDPRESS"
-						language2="CSS"
-						language3="HTML"
-						webLink="https://baselinehealthcare.co.uk/"
-					/>
-					<ProjectCard
-						image="/images/topassured.png"
-						name="TOPASSURED HEALTHCARE WEBSITE"
-						language1="WORDPRESS"
-						language2="CSS"
-						language3="HTML"
-						webLink="https://topassuredhealthcare.com/"
-					/>
-				</div>
-			</section>
-			<section
-				id="contact"
-				className="flex flex-col gap-5 mt-10 justify-center pb-12 border-b-4 border-b-white md:grid md:grid-cols-2 lg:grid lg:grid-cols-2"
+		<div className="bg-blue-950 " name="landingpage">
+			<NavBar />
+			{/* ABOUT SECTION */}
+			<div
+				name="home"
+				className="flex flex-col gap-1 h-auto mt-10 justify-center max-w-[1000px] mx-auto px-6"
 			>
-				<div className="flex flex-col gap-3 text-center md:text-left lg:text-left">
-					<h1 className="text-2xl font-sans md:text-lg lg:text-4xl font-bold">
-						Contact
-					</h1>
-					<p className="font-sans text-base md:w-[40ch]">
-						I would love to hear from you. Please fill in the form, and I'll get
-						back to you as soon as possible
-					</p>
+				<p className="text-white font-Inter">Hi, I am </p>
+				<h1 className="font-Inter text-4xl sm:text-6xl font-bold text-white">
+					Stanley Osuozah.
+				</h1>
+				<h2 className="font-Inter text-4xl sm:text-7xl font-bold text-white/60">
+					I'm a Frontend Developer.
+				</h2>
+				<p className="font-Inter max-w-[700px] text-white/60 py-4">
+					Highly motivated web developer with a keen focus on front-end
+					development, I have a proven track record of successfully creating
+					responsive web applications. My extensive knowledge of HTML, CSS,
+					ReactJS, and JavaScript, combined with my passion for developing
+					innovative user interfaces, enables me to deliver exceptional user
+					experiences that meet the needs of businesses and their users.{" "}
+				</p>
+				<div>
+					<button className="border-2 font-Inter  group flex gap-2 items-center px-6 py-3 mb-2 hover:bg-black/80 hover:border-black/80 text-white">
+						See Projects
+						<span>
+							<HiArrowNarrowRight className="group-hover:rotate-90 duration-300" />
+						</span>
+					</button>
 				</div>
-				<div className="">
-					<form onSubmit={sendEmail} ref={form}>
-						<div className="mb-4 sm:mb-8">
-							<label
-								htmlFor="hs-feedback-post-comment-name-1"
-								className="block mb-2 text-sm font-medium dark:text-white"
-							>
-								Full name
-							</label>
-							<input
-								type="text"
-								name="name"
-								className="py-3 px-4 block text-black font-sans w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4"
-								placeholder="Full name"
-							/>
-						</div>
+			</div>
 
-						<div className="mb-4 sm:mb-8">
-							<label
-								htmlFor="hs-feedback-post-comment-email-1"
-								className="block mb-2 text-sm font-medium dark:text-white"
-							>
-								Email address
-							</label>
-							<input
-								type="email"
-								name="email"
-								className="py-3 text-black font-sans px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4"
-								placeholder="Email address"
-							/>
+			{/* ABOUT SECTION */}
+			<div name="about" className="w-full mt-20 h-auto   bg-blue-950 ">
+				<div className="flex flex-col justify-center items-center w-full ">
+					<div className="w-full px-2  max-w-[1000px] grid gap-8 grid-cols-2">
+						<div className="sm:text-right pb-8 pl-4">
+							<p className="font-Inter text-4xl font-bold inline text-white border-b-4 border-white/60">
+								About
+							</p>
 						</div>
-
+						<div></div>
+					</div>
+					<div className="w-full max-w-[1000px] px-6 grid gap-8 sm:grid-cols-2 text-white">
 						<div>
-							<label
-								htmlFor="hs-feedback-post-comment-textarea-1"
-								className="block mb-2 text-sm font-medium dark:text-white"
-							>
-								Message
-							</label>
-							<div className="mt-1">
-								<textarea
-									name="message"
-									rows="3"
-									className="text-black font-sans py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4"
-									placeholder="Leave your message here.."
-								></textarea>
-							</div>
+							<p className="font-Inter text-4xl font-bold sm:text-right">
+								Hi, I'm Stanley Osuozah, nice to meet you.
+							</p>
 						</div>
+						<div>
+							<p>
+								Highly motivated web developer with a keen focus on front-end
+								development, I have a proven track record of successfully
+								creating responsive web applications. My extensive knowledge of
+								HTML, CSS, ReactJS, and JavaScript, combined with my passion for
+								developing innovative user interfaces, enables me to deliver
+								exceptional user experiences that meet the needs of businesses
+								and their users.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-						<div className="mt-6 grid">
-							<button
-								type="submit"
-								className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-lime-500 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800"
-							>
-								Submit
-							</button>
-						</div>
+			{/* SKILLS */}
+			<div name="skills" className="bg-blue-950 mt-20">
+				<div className="flex flex-col w-full text-white justify-center px-4 mx-auto max-w-[1000px]">
+					<div>
+						<p className="text-white text-4xl inline font-Inter font-bold border-b-4 border-white/70">
+							Skills
+						</p>
+						<p className="py-3 font-Inter">Technologies I've worked with</p>
+					</div>
+					<div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-4 text-center py-8">
+						<SkillsCard image={HTML} skill="HTML" />
+						<SkillsCard image={CSS} skill="CSS" />
+						<SkillsCard image={JAVASCRIPT} skill="JAVASCRIPT" />
+						<SkillsCard image={REACT} skill="REACT" />
+						<SkillsCard image={TAILWIND} skill="TAILWIND CSS" />
+						<SkillsCard image={GIT} skill="GIT" />
+					</div>
+				</div>
+			</div>
+
+			{/* PROJECTS */}
+			<div
+				name="projects"
+				className="w-full md:h-screen text-white bg-blue950 mt-20"
+			>
+				<div className="flex flex-col w-full text-white justify-center px-4 mx-auto max-w-[1000px]">
+					<div className="pb-6">
+						<p className="font-Inter border-b-4 border-white/70 inline text-4xl font-bold">
+							Projects
+						</p>
+						<p className="font-Inter">Checkout some of my projects</p>
+					</div>
+
+					<div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4">
+						<ProjectCard
+							name="Finebank Dashboard"
+							projectURL="https://fintech-dashboard-kappa.vercel.app/"
+							gitHub="https://github.com/stanosuozah/fintech_dashboard"
+							image={Finebank}
+						/>
+						<ProjectCard
+							name="Unideals Web App"
+							image={Unideals}
+							projectURL="https://myunideals.com/"
+						/>
+						<ProjectCard
+							name="Unideals Partner page"
+							image={UnidealsPartner}
+							projectURL="https://partners.myunideals.com/"
+						/>
+						<ProjectCard
+							name="Ehya Blog App"
+							image={Ehya}
+							projectURL="https://ehyablog.vercel.app/"
+						/>
+					</div>
+				</div>
+			</div>
+			{/* 
+			CONTACT SECTION */}
+			<div name="contact" className="bg-blue-950 mt-20">
+				<div className="flex flex-col w-full text-white justify-center items-center px-4 mx-auto max-w-[1000px]">
+					<form
+						method="post"
+						action="https://getform.io/f/df107ebc-e370-4a98-96b3-c02f5d01f0c5"
+						className="font-Inter flex gap-3 flex-col max-w-[600px] w-full"
+					>
+						<p className="font-Inter border-b-4 border-white/70 text-4xl font-bold">
+							Contact
+						</p>
+						<p className="text-white/90">
+							Complete the form below to contact me!
+						</p>
+						<input
+							className="p-2 rounded-md bg-[#ccd6f6]"
+							type="text"
+							placeholder="Name"
+							name="name"
+						/>
+						<input
+							className="p-2 rounded-md bg-[#ccd6f6]"
+							type="text"
+							placeholder="Email"
+							name="email"
+						/>
+						<textarea
+							rows="10"
+							name="message"
+							placeholder="Message"
+							className="p-2 rounded-md bg-[#ccd6f6]"
+						></textarea>
+						<button className="border-2 hover:bg-black duration-300 border-white mx-auto flex text-white px-4 py-3">
+							Let's collaborate now!
+						</button>
 					</form>
 				</div>
-			</section>
-			<footer className="flex flex-col mt-4">
-				<nav className="flex gap-2 justify-between  md:flex-row md:justify-between  lg:flex lg:justify-between ">
-					<p>stanleyosuozah</p>
-
-					<div className="flex gap-3 items-center">
-						<a href="https://github.com/stanosuozah" target="_blank">
-							<FaGithub />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/stanley-osuozah-260292142/"
-							target="_blank"
-						>
-							<FaLinkedin />
-						</a>
-						<a
-							className="cursor-pointer"
-							href="/files/Stanley-Osuozah FrontendDev updated.docx"
-							download
-						>
-							<p className="font-sans">Resume</p>
-						</a>
-					</div>
-				</nav>
-			</footer>
+			</div>
 		</div>
 	);
 };
