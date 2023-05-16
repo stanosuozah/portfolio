@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { FaGithub, FaTimes, FaBars, FaLinkedin } from "react-icons/fa";
 import axios from "axios";
 import NavBar from "../components/NavBar";
 import HTML from "../assets/images/html.png";
@@ -15,21 +16,11 @@ import Ehya from "../assets/images/ehya.png";
 import Bloomway from "../assets/images/bloomway.png";
 import UnidealsPartner from "../assets/images/unidealspartner.png";
 import ProjectCard from "../components/ProjectCard";
+import CV from "../assets/files/Stanley-Osuozah FrontendDev updated.pdf";
 import { Link } from "react-scroll";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const LandingPage = () => {
-	const handleSubmit = () => {
-		axios
-			.post(
-				"https://getform.io/f/df107ebc-e370-4a98-96b3-c02f5d01f0c5",
-				{
-					message: "Hello, World",
-				},
-				{ headers: { Accept: "application/json" } }
-			)
-			.then((response) => console.log(response))
-			.catch((error) => console.log(error));
-	};
 	return (
 		<div className="bg-blue-950 " name="landingpage">
 			<NavBar />
@@ -62,12 +53,12 @@ const LandingPage = () => {
 			</div>
 
 			{/* ABOUT SECTION */}
-			<div name="about" className="w-full mt-20 h-auto   bg-blue-950 ">
+			<div name="about" className="w-full md:mt-20 mt-10 h-auto   bg-blue-950 ">
 				<div className="flex flex-col justify-center items-center w-full ">
 					<div className="w-full px-2  max-w-[1000px] grid gap-8 grid-cols-2">
 						<div className="sm:text-right pb-8 pl-4">
 							<p className="font-Inter text-4xl font-bold inline text-white border-b-4 border-white/60">
-								About Me
+								About
 							</p>
 						</div>
 						<div></div>
@@ -91,7 +82,7 @@ const LandingPage = () => {
 			</div>
 
 			{/* SKILLS */}
-			<div name="skills" className="bg-blue-950 mt-20">
+			<div name="skills" className="bg-blue-950 md:mt-20 mt-10">
 				<div className="flex flex-col w-full text-white justify-center px-4 mx-auto max-w-[1000px]">
 					<div>
 						<p className="text-white text-4xl inline font-Inter font-bold border-b-4 border-white/70">
@@ -113,7 +104,7 @@ const LandingPage = () => {
 			{/* PROJECTS */}
 			<div
 				name="projects"
-				className="w-full md:h-screen text-white bg-blue950 mt-20"
+				className="w-full md:h-screen text-white bg-blue950 md:mt-20 mt-10"
 			>
 				<div className="flex flex-col w-full text-white justify-center px-4 mx-auto max-w-[1000px]">
 					<div className="pb-6">
@@ -155,7 +146,7 @@ const LandingPage = () => {
 			</div>
 			{/* 
 			CONTACT SECTION */}
-			<div name="contact" className="bg-blue-950 mt-32">
+			<div name="contact" className="bg-blue-950 md:mt-32 mt-10">
 				<div className="flex flex-col w-full text-white justify-center items-center px-4 mx-auto max-w-[1000px]">
 					<form
 						method="post"
@@ -190,6 +181,45 @@ const LandingPage = () => {
 							Let's collaborate now!
 						</button>
 					</form>
+				</div>
+			</div>
+
+			{/* FOOTER */}
+			<div
+				name="footer"
+				className="w-full mt-10 h-auto flex justify-between pb-4 bg-blue-950 md:hidden "
+			>
+				<div className="flex justify-between mx-auto">
+					<ul className="flex justify-start ">
+						<li className=" px-2 flex justify-between items-center">
+							<a
+								href="https://www.linkedin.com/in/stanley-osuozah-260292142/"
+								target="_blank"
+								className=" inline-flex font-Inter font-bold justify-between items-center w-full text-gray-200"
+							>
+								<FaLinkedin className="w-[40px] h-[40px]" />
+							</a>
+						</li>
+						<li className=" px-2 flex justify-between items-center">
+							<a
+								href="https://github.com/stanosuozah"
+								target="_blank"
+								className=" inline-flex font-Inter font-bold justify-between items-center w-full text-gray-200"
+							>
+								<FaGithub className="w-[40px] h-[40px]" />
+							</a>
+						</li>
+
+						<li className=" px-2 flex justify-between items-center">
+							<a
+								href={CV}
+								download
+								className=" inline-flex font-Inter font-bold justify-between items-center w-full text-gray-200"
+							>
+								<BsFillPersonLinesFill className="w-[40px] h-[40px]" />
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
